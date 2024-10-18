@@ -25,6 +25,11 @@ struct ContentView: View {
                     .tabItem{
                         Label("Calcular", systemImage: "wallet.pass.fill")
                     }
+                DashboardView()
+                    .tabItem{
+                        Label("Dashboard", systemImage: "chart.line.uptrend.xyaxis")
+                    }
+                
                 
                 //waveform.path.ecg.rectangle.fill // Dashboard
             }
