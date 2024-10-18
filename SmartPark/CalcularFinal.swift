@@ -43,8 +43,7 @@ struct CalcularFinal: View {
             
             VStack{
                 Color.corTopoLista
-                
-            }.ignoresSafeArea()
+            }
             
             VStack{
                 HStack{

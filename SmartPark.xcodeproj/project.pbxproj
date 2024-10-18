@@ -17,9 +17,9 @@
 		6716FC6D2CBDD002006FB4CC /* vagasDisponiveisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716FC6C2CBDD002006FB4CC /* vagasDisponiveisView.swift */; };
 		6716FC712CBDE434006FB4CC /* vagaIsoladaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716FC702CBDE434006FB4CC /* vagaIsoladaView.swift */; };
 		6716FC732CC07C8D006FB4CC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716FC722CC07C8D006FB4CC /* ViewModel.swift */; };
-		67705C032CC1F439000C95E0 /* CalcularFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67705C022CC1F439000C95E0 /* CalcularFinal.swift */; };
-		67705C052CC1F54F000C95E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67705C042CC1F54F000C95E0 /* DashboardView.swift */; };
 		67705C072CC2EED5000C95E0 /* formatDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67705C062CC2EED5000C95E0 /* formatDate.swift */; };
+		67705C092CC3049A000C95E0 /* CalcularFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67705C082CC3049A000C95E0 /* CalcularFinal.swift */; };
+		67705C0B2CC304EE000C95E0 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67705C0A2CC304EE000C95E0 /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 		6716FC6C2CBDD002006FB4CC /* vagasDisponiveisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vagasDisponiveisView.swift; sourceTree = "<group>"; };
 		6716FC702CBDE434006FB4CC /* vagaIsoladaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vagaIsoladaView.swift; sourceTree = "<group>"; };
 		6716FC722CC07C8D006FB4CC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		67705C022CC1F439000C95E0 /* CalcularFinal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalcularFinal.swift; path = ../../../../Downloads/CalcularFinal.swift; sourceTree = "<group>"; };
-		67705C042CC1F54F000C95E0 /* DashboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardView.swift; path = ../../../../Downloads/DashboardView.swift; sourceTree = "<group>"; };
 		67705C062CC2EED5000C95E0 /* formatDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formatDate.swift; sourceTree = "<group>"; };
+		67705C082CC3049A000C95E0 /* CalcularFinal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcularFinal.swift; sourceTree = "<group>"; };
+		67705C0A2CC304EE000C95E0 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +77,11 @@
 				6716FC6A2CB74D9B006FB4CC /* listaEstacionamentosView.swift */,
 				6716FC6C2CBDD002006FB4CC /* vagasDisponiveisView.swift */,
 				6716FC702CBDE434006FB4CC /* vagaIsoladaView.swift */,
-				67705C022CC1F439000C95E0 /* CalcularFinal.swift */,
-				67705C042CC1F54F000C95E0 /* DashboardView.swift */,
 				6716FC5C2CB73613006FB4CC /* Assets.xcassets */,
 				6716FC5E2CB73613006FB4CC /* Preview Content */,
 				6716FC722CC07C8D006FB4CC /* ViewModel.swift */,
+				67705C082CC3049A000C95E0 /* CalcularFinal.swift */,
+				67705C0A2CC304EE000C95E0 /* DashboardView.swift */,
 			);
 			path = SmartPark;
 			sourceTree = "<group>";
@@ -164,13 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67705C092CC3049A000C95E0 /* CalcularFinal.swift in Sources */,
 				6716FC6D2CBDD002006FB4CC /* vagasDisponiveisView.swift in Sources */,
 				6716FC672CB743BF006FB4CC /* Model.swift in Sources */,
 				6716FC5B2CB7360F006FB4CC /* ContentView.swift in Sources */,
-				67705C032CC1F439000C95E0 /* CalcularFinal.swift in Sources */,
 				6716FC6B2CB74D9B006FB4CC /* listaEstacionamentosView.swift in Sources */,
 				6716FC592CB7360F006FB4CC /* SmartParkApp.swift in Sources */,
-				67705C052CC1F54F000C95E0 /* DashboardView.swift in Sources */,
+				67705C0B2CC304EE000C95E0 /* DashboardView.swift in Sources */,
 				67705C072CC2EED5000C95E0 /* formatDate.swift in Sources */,
 				6716FC692CB74C40006FB4CC /* mapaEstacionamentosView.swift in Sources */,
 				6716FC732CC07C8D006FB4CC /* ViewModel.swift in Sources */,
