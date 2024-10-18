@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct vagaIsoladaView: View {
-    @State var estacionamentoSelecionado = "A"
+    
+    @State var estacionamentoSelecionado = "River Shopping"
     @State var vagaSelecionada = 1
     @State var statusVagaSelecionada = "OCUPADO"
     
@@ -65,6 +66,14 @@ struct vagaIsoladaView: View {
                         
                         Color.corVerdeEscuro
                             .frame(width: 100, height: 80)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 0,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 30,
+                                    topTrailingRadius: 0
+                                )
+                            )
                             .offset(x: 0, y: -8)
                         Spacer()
                     }.offset(x:-100, y:-20)
@@ -107,7 +116,7 @@ struct vagaIsoladaView: View {
                                     .rect(
                                         topLeadingRadius: 0,
                                         bottomLeadingRadius: 60,
-                                        bottomTrailingRadius: 0,
+                                        bottomTrailingRadius: 60,
                                         topTrailingRadius: 0
                                     )
                                 )
@@ -116,16 +125,131 @@ struct vagaIsoladaView: View {
                     }.offset(x:80, y:-224.5)
                     
                     Text("STATUS")
-                        .offset(x:50, y:-242)
+                        .offset(x:80, y:-242)
                         .bold()
                         .foregroundStyle(.corBackground)
                         .font(.system(size: 20))
                     
                     Text(statusVagaSelecionada)
-                        .offset(x: 100, y: -214)
+                        .offset(x: 80, y: -214)
                         .bold()
                         .foregroundStyle(.corBackground)
                         .font(.system(size: 20))
+                    
+                    // Desenho TIPO DE VEICULO
+                    VStack{
+                        Color.corTopoLista
+                            .frame(width: 220, height: 30)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 60,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 0,
+                                    topTrailingRadius: 0
+                                )
+                            )
+                        Color.corCinza
+                            .frame(width: 220, height: 30)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 0,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 60,
+                                    topTrailingRadius: 0
+                                )
+                            )
+                            .offset(x:0, y:-8)
+                    }.offset(x: -40, y:-80)
+                    
+                    Text("Tipo de Veiculo Aceito")
+                        .bold()
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x:100, y:-18)
+                        .offset(x: -40, y:-80)
+                    
+                    Text("CARRO")
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x: 98, y: 11)
+                        .offset(x: -40, y:-80)
+                    
+                    // Desenho TIPO DE VAGA
+                    VStack{
+                        Color.corTopoLista
+                            .frame(width: 220, height: 30)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 60,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 0,
+                                    topTrailingRadius: 0
+                                )
+                            )
+                        Color.corCinza
+                            .frame(width: 220, height: 30)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 0,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 60,
+                                    topTrailingRadius: 0
+                                )
+                            )
+                            .offset(x:0, y:-8)
+                    }.offset(x: -40, y:10)
+                    
+                    Text("Tipo de Vaga")
+                        .bold()
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x:100, y:-18)
+                        .offset(x: -40, y:10)
+                    
+                    Text("PADRÃO")
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x: 98, y: 11)
+                        .offset(x: -40, y:10)
+                    
+                    // SUPORTE PLUS
+                    VStack{
+                        Color.corTopoLista
+                            .frame(width: 220, height: 30)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 60,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 0,
+                                    topTrailingRadius: 0
+                                )
+                            )
+                        Color.corCinza
+                            .frame(width: 220, height: 30)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 0,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 60,
+                                    topTrailingRadius: 0
+                                )
+                            )
+                            .offset(x:0, y:-8)
+                    }.offset(x: -40, y:100)
+                    
+                    Text("Suporte PLUS")
+                        .bold()
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x:100, y:-18)
+                        .offset(x: -40, y:100)
+                        
+                    
+                    Text("MANOBRISTA")
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .offset(x: 98, y: 11)
+                        .offset(x: -40, y:100)
                 }
                 
             }.padding(.top, 190)

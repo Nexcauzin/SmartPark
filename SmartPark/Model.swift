@@ -8,28 +8,35 @@
 import Foundation
 import MapKit
 
-struct Estacionamento : Identifiable{
-    let id = UUID()
+struct Estacionamento : Hashable, Decodable{
+    let _id: String
     let nome: String
-    let localizacao: CLLocationCoordinate2D
-    let vagas: Vagas
+    let latitude: Float
+    let longitude: Float
     let custo: Float
     let avaliacao: Float
     let avaliacaoContagem: Int
 }
 
 
-struct Vagas{
-    let vaga_1: String
-    let vaga_2: String
-    let vaga_3: String
-    let vaga_4: String
+struct Carro: Hashable, Decodable{
+    let _id: String
+    let status: String
+    let last_arrival: String
+    let last_exit: String
 }
 
 
+struct VagasD: Hashable{
+    var nome: String
+    var nom: String
+    var vagaLivre: Bool
+}
 
-// Dados compartilhados através do app
-var estacionamentos = [
-    Estacionamento(nome: "River Shopping", localizacao: CLLocationCoordinate2D(latitude: -9.395108, longitude: -40.492994), vagas: Vagas(vaga_1: "Ocupado", vaga_2: "Livre", vaga_3: "Ocupado", vaga_4: "Ocupado"), custo: 10, avaliacao: 4.5, avaliacaoContagem: 137),
-    Estacionamento(nome: "Hotel Costa do Rio", localizacao: CLLocationCoordinate2D(latitude: -9.401267, longitude: -40.504280), vagas: Vagas(vaga_1: "Ocupado", vaga_2: "Livre", vaga_3: "Ocupado", vaga_4: "Ocupado"), custo: 15, avaliacao: 3, avaliacaoContagem: 29)
+var vagasD = [
+    VagasD(nome: "2", nom: "1", vagaLivre: true),
+    VagasD(nome: "4" , nom: "3", vagaLivre: false),
+    VagasD(nome: "6" , nom: "5", vagaLivre: true),
+    VagasD(nome: "8", nom: "7", vagaLivre: false),
+    VagasD(nome: "10", nom: "9", vagaLivre: true),
 ]

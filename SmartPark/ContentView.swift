@@ -13,16 +13,21 @@ struct ContentView: View {
             TabView{
                 mapaEstacionamentosView()
                     .tabItem{
-                        Label("Mapa", systemImage: "paintbrush.fill")
+                        Label("Mapa", systemImage: "map.circle.fill")
                     }
                 
                 listaEstacionamentosView()
                     .tabItem {
-                        Label("Lista", systemImage: "line.3.horizontal")
+                        Label("Lista", systemImage: "line.3.horizontal.circle.fill")
                     }
+                
+                CalcularFinal()
+                    .tabItem{
+                        Label("Calcular", systemImage: "wallet.pass.fill")
+                    }
+                
+                //waveform.path.ecg.rectangle.fill // Dashboard
             }
-            
-            
         }
     }
 }

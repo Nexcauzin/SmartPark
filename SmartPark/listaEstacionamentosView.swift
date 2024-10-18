@@ -5,9 +5,11 @@
 //  Created by Turma02-26 on 09/10/24.
 //
 
+
 import SwiftUI
 
 struct listaEstacionamentosView: View {
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
         NavigationStack{
@@ -49,7 +51,7 @@ struct listaEstacionamentosView: View {
                 
                 VStack{
                     ScrollView(.vertical){
-                        ForEach(estacionamentos){ estacionamento in
+                        ForEach(viewModel.estacionamentos, id: \.self){ estacionamento in
                             NavigationLink(destination: vagasDisponiveisView()){
                                 ZStack{
                                     HStack{
@@ -79,6 +81,7 @@ struct listaEstacionamentosView: View {
                                         
                                         VStack(alignment: .leading, spacing: 0){
                                             Text(estacionamento.nome)
+                                                .multilineTextAlignment(.leading)
                                                 .foregroundStyle(.black)
                                                 .bold()
                                                 .padding(.vertical, 3)
@@ -106,7 +109,10 @@ struct listaEstacionamentosView: View {
                 
                 
             }.ignoresSafeArea()
-        }.tint(.white)
+        }.onAppear(){
+            viewModel.fetch()
+        }
+        .tint(.white)
     }
 }
 

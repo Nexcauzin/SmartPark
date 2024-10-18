@@ -11,6 +11,8 @@ import MapKit
 
 
 struct mapaEstacionamentosView: View {
+    @StateObject var viewModel = ViewModel()
+    
     @State var showSheet = false
     
     @State var position = MapCameraPosition.region(
@@ -23,9 +25,11 @@ struct mapaEstacionamentosView: View {
         NavigationStack{
             ZStack{
                 Map(){
+                    //Text("\(viewModel.estacionamentos.count)")
                     // Botões do mapa
-                    ForEach(estacionamentos){ estacionamento in
-                        Annotation("", coordinate: estacionamento.localizacao){
+                    ForEach(viewModel.estacionamentos, id: \.self){ estacionamento in
+                        
+                        Annotation("", coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(estacionamento.latitude), longitude: CLLocationDegrees(estacionamento.longitude))){
                             NavigationLink(destination: vagasDisponiveisView()){
                                 HStack{
                                     ZStack{
@@ -64,7 +68,10 @@ struct mapaEstacionamentosView: View {
                     }
                 }
             }
-        }.tint(.white)
+        }.onAppear(){
+            viewModel.fetch()
+        }
+        .tint(.white)
     }
 }
 
